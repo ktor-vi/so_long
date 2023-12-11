@@ -13,10 +13,9 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	if (new == NULL)
-		return ;
-	new->next = *lst;
-	*lst = new;
+void ft_lstadd_front(t_list **lst, t_list *new_node) {
+  if (new_node == NULL)
+    return;
+  new_node->next = *lst;
+  *lst = new_node;
 }

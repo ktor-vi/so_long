@@ -13,19 +13,15 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	struct s_list	*last;
+void ft_lstadd_back(t_list **lst, t_list *new_node) {
+  struct s_list *last;
 
-	if (new == NULL)
-		return ;
-	last = ft_lstlast(*lst);
-	if (last != NULL)
-	{
-		last->next = new;
-	}
-	else
-	{
-		*lst = new;
-	}
+  if (new_node == NULL)
+    return;
+  last = ft_lstlast(*lst);
+  if (last != NULL) {
+    last->next = new_node;
+  } else {
+    *lst = new_node;
+  }
 }
